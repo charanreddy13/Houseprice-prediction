@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>House Price Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">House Price Prediction</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">House Price Prediction</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">House Price Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the price of the house
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="Bedrooms"><b>Bedrooms</b></label>
+            <br>
+          <input placeholder=" no.of Bedrooms" name="Bedrooms" id="Bedrooms" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="bathrooms"><b>bathrooms</b></label>
+            <br>
+          <input placeholder="no.of bathrooms" name="bathrooms" id="bathrooms" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="sqft_living"><b>sqft_living</b></label>
+            <br>
+          <input placeholder="sqft_living" name="sqft_living" id="sqft_living" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="sqft_lot"><b>sqft_lot</b></label>
+            <br>
+          <input placeholder="sqft_lot" name="sqft_lot" id="sqft_lot" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="floors"><b>floors</b></label>
+            <br>
+          <input placeholder="no.of floors" name="floors" id="floors" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="waterfront"><b>waterfront</b></label>
+            <br>
+          <input placeholder="waterfront" name="waterfront" id="waterfront" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+          <label for="view"><b>view</b></label>
+            <br>
+          <input id="view" name="view" placeholder="no.of view"  type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="condition"><b>condition</b></label>
+            <br>
+          <input id="condition" name="condition" placeholder="condition" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="grade"><b>grade</b></label>
+            <br>
+          <input id="grade" name="grade" placeholder="grade" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="sqft_above"><b>sqft_above</b></label>
+            <br>
+          <input id="sqft_above" name="sqft_above" placeholder="sqft_above" type="text" class="validate">
+        </div>
+          
+          <div class="input-field col s4">
+            <label for="sqft_basement"><b>sqft_basement</b></label>
+            <br>
+          <input id="sqft_basement" name="sqft_basement" placeholder="sqft_basement" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="sqft_living15"><b>sqft_living15</b></label>
+            <br>
+          <input id="sqft_living15" name="sqft_living15" placeholder="sqft_living15" type="text" class="validate">
+        </div>
+          <div class="input-field col s4">
+            <label for="sqft_lot15"><b>sqft_lot15</b></label>
+            <br>
+          <input id="sqft_lot15" name="sqft_lot15" placeholder="sqft_lot15" type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict the Price</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+
+
+  
+
+       
+
+  </body>
+</html>
+
